@@ -4,6 +4,8 @@
 TODO
 .DS_Store
 
+app/petereport/static/uploads/*
+app/storage_reports/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -43,3 +43,6 @@
 {{template_findings}}
 
 \pagebreak
+{{template_appendix}}
+
+\pagebreak
