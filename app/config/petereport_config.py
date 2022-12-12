@@ -1,10 +1,10 @@
 PETEREPORT_CONFIG = {
 	'admin_username': 'admin',
-	'admin_password': 'P3t3r3p0rt',
-	'admin_email': 'admin@petereport.pentest',
-	'viewer_username': 'viewer',
-	'viewer_password': 'v13w3r',
-	'viewer_email': 'viewer@petereport.pentest'
+	'admin_password': 'Password1!',
+	'admin_email': 'admin@qu35t.pw',
+	'viewer_username': 'guest',
+	'viewer_password': 'aAwHQp96rnW@dHCT.q',
+	'viewer_email': 'guest@qu35t.pw'
 }
 
 DEFECTDOJO_CONFIG = {
@@ -43,9 +43,9 @@ PETEREPORT_TEMPLATES = {
 }
 
 PETEREPORT_MARKDOWN = {
-	'author': 'Pentest company',
+	'author': 'QU35T Corporation',
 	'subject': 'Pentest Report',
-	'website': 'https://github.com/1modm/petereport',
+    'website': '',
 	'martor_upload_method': 'BASE64', # BASE64 (stored in DB) or MEDIA (path not protected, must be set 'debug': True. This is highly insecure and not encouraged for production use. Should be configured the web server (apache, nginx, etc) to serve the media content using a protected link) 
 	'media_host': 'http://127.0.0.1:8000' # If docker deployment, set https://<HOST IP>, else for django deployment http://<HOST IP>:8000 
 }
