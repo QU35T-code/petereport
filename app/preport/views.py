@@ -378,8 +378,8 @@ def report_list(request):
 @allowed_users(allowed_roles=['administrator'])
 def report_add(request):
 
-    today = datetime.date.today().strftime('%Y-%m-%d')
-    nowformat = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
+    today = datetime.date.today().strftime('%d %B, %Y')
+    nowformat = datetime.datetime.utcnow().strftime('%d %B, %Y')
     report_id_format = PETEREPORT_TEMPLATES['report_id_format'] + str(datetime.datetime.utcnow().strftime('%Y%m%d%H%M'))
 
     if request.method == 'POST':
@@ -571,9 +571,9 @@ def reportdownloadmarkdown(request,pk):
     DB_finding_query = DB_Finding.objects.filter(report=DB_report_query).order_by('cvss_score').reverse()
 
     # Datetime
-    today = datetime.date.today().strftime('%Y-%m-%d')
-    nowformat = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    report_date = DB_report_query.report_date.strftime('%d-%m-%Y')
+    today = datetime.date.today().strftime('%d %B, %Y')
+    nowformat = datetime.datetime.utcnow().strftime('%d %B, %Y')
+    report_date = DB_report_query.report_date.strftime('%d %B, %Y')
 
     # MD filename
     name_file = PETEREPORT_TEMPLATES['report_markdown_name'] + '_' + DB_report_query.title + '_' +  str(datetime.datetime.utcnow().strftime('%Y%m%d%H%M')) + '.md'
@@ -671,9 +671,9 @@ def reportdownloadhtml(request,pk):
     DB_finding_query = DB_Finding.objects.filter(report=DB_report_query).order_by('cvss_score').reverse()
 
     # Datetime
-    today = datetime.date.today().strftime('%Y-%m-%d')
-    nowformat = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    report_date = DB_report_query.report_date.strftime('%d-%m-%Y')
+    today = datetime.date.today().strftime('%d %B, %Y')
+    nowformat = datetime.datetime.utcnow().strftime('%d %B, %Y')
+    report_date = DB_report_query.report_date.strftime('%d %B, %Y')
 
     # HTML filename
     name_file = PETEREPORT_TEMPLATES['report_html_name'] + '_' + DB_report_query.title + '_' +  str(datetime.datetime.utcnow().strftime('%Y%m%d%H%M')) + '.html'
@@ -821,9 +821,9 @@ def reportdownloadpdf(request,pk):
     DB_finding_query = DB_Finding.objects.filter(report=DB_report_query).order_by('cvss_score').reverse()
 
     # Datetime
-    today = datetime.date.today().strftime('%Y-%m-%d')
-    nowformat = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    report_date = DB_report_query.report_date.strftime('%d-%m-%Y')
+    today = datetime.date.today().strftime('%d %B, %Y')
+    nowformat = datetime.datetime.utcnow().strftime('%d %B, %Y')
+    report_date = DB_report_query.report_date.strftime('%d %B, %Y')
 
     # PDF filename
     name_file = PETEREPORT_TEMPLATES['report_pdf_name'] + '_' + DB_report_query.title + '_' +  str(datetime.datetime.utcnow().strftime('%Y%m%d%H%M')) + '.pdf'
@@ -997,9 +997,9 @@ def reportdownloadjupyter(request,pk):
     DB_finding_query = DB_Finding.objects.filter(report=DB_report_query).order_by('cvss_score').reverse()
 
     # Datetime
-    today = datetime.date.today().strftime('%Y-%m-%d')
-    nowformat = datetime.datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    report_date = DB_report_query.report_date.strftime('%d-%m-%Y')
+    today = datetime.date.today().strftime('%d %B, %Y')
+    nowformat = datetime.datetime.utcnow().strftime('%d %B, %Y')
+    report_date = DB_report_query.report_date.strftime('%d %B, %Y')
 
     # MD filename
     name_file = PETEREPORT_TEMPLATES['report_jupyter_name'] + '_' + DB_report_query.title + '_' +  str(datetime.datetime.utcnow().strftime('%Y%m%d%H%M')) + '.ipynb'
